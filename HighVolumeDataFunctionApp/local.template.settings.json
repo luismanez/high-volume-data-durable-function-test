@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "DurableStorageUsageConnectionString": "UseDevelopmentStorage=true",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "",
+    "NumberOfItemsToProcess": 30000,
+    "SynchroniseWorkspacesTimerCron": "0 */20 * * * *",
+    "GetGroupWorkspacesFromGraphActivityDelayInMiliseconds": "5000",
+    "GetWorkspaceDetailedInfoFromGraphActivityDelayInMiliseconds": "5",
+    "GetWorkspaceDetailedInfoFromSharePointActivityDelayInMiliseconds": "5",
+    "PersistWorkspaceActivityDelayInMiliseconds": "5"
+  }
+}

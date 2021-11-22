@@ -1,0 +1,41 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingExcludedTypes": "Request",
+      "samplingSettings": {
+        "isEnabled": true
+      },
+      "httpAutoCollectionOptions": {
+        "enableW3CDistributedTracing": true
+      }
+    },
+    "logLevel": {
+      "default": "Warning",
+      "Function": "Information",
+      "Microsoft": "Warning",
+      "Host.Aggregator": "Warning",
+      "Host.Results": "Error"
+    }
+  },
+  "functionTimeout": "00:59:00",
+  "extensions": {
+    "queues": {
+      "maxPollingInterval": "00:00:02",
+      "visibilityTimeout": "00:00:30",
+      "batchSize": 16,
+      "maxDequeueCount": 5,
+      "newBatchThreshold": 8
+    },
+    "durableTask": {
+      "hubName": "WorkspacesSynchronisation",
+      "tracing": {
+        "distributedTracingEnabled": true,
+        "distributedTracingProtocol": "W3CTraceContext"
+      },
+      "storageProvider": {
+        "connectionStringName": "DurableStorageUsageConnectionString"
+      }
+    }
+  }
+}
